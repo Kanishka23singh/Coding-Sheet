@@ -16,7 +16,7 @@ Factors of 9 : 1 * 9, 3 * 4 --> [1,9,3]
 Factors of 12 : 1 * 12, 2 * 6, 3 * 4 --> [1,12,2,6,3,4]
 
 So, if 'i' is factor of 'n' say
-Then factor pair of 'i' will be 'n/i'
+Then factor pair of n will be 'i' & 'n/i'
 */
 class Factors {
   public static List<Integer> allFactors(int n) {
