@@ -12,6 +12,7 @@ Example 2:
 Input: s = "rat", t = "car"
 Output: false*/
 
+
 /*
 This approach iterates through both strings once, resulting in O(n) time complexity, where 'n' is the length of the strings. The algorithm uses a fixed-size array (size 26), leading to O(1) space complexity.
 
