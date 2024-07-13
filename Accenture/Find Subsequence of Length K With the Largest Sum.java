@@ -14,7 +14,18 @@ Example 2:
 Input: nums = [-1,-2,3,4], k = 3
 Output: [-1,3,4]
 Explanation: 
-The subsequence has the largest sum of -1 + 3 + 4 = 6.*/
+The subsequence has the largest sum of -1 + 3 + 4 = 6.
+
+Intuition: The code uses a priority queue to maintain the top `k` largest elements in `nums` by their values, paired with their indices. 
+It then stores the indices of these top elements in a set and reconstructs the subsequence from the original array while preserving their order. 
+This approach ensures the subsequence of length `k` with the largest sum while maintaining the order of elements.
+
+Algorithm:
+1.Initialize Priority Queue: Use a min-heap (priority queue) to keep track of the top k largest elements, each element stored as a pair (value, index).
+2.Populate Priority Queue: Iterate through nums, adding each element to the priority queue. If the queue exceeds size k, remove the smallest element to ensure it only contains the top k elements.
+3.Extract Indices: Extract the indices of the top k elements from the priority queue and store them in a set.
+4.Construct Result Array: Iterate through nums and add elements to the result array if their index is in the set, preserving the original order.
+5.Return Result: Return the result array containing the subsequence of length k with the largest sum.*/
 
 class Solution {
     public int[] maxSubsequence(int[] nums, int k) {
