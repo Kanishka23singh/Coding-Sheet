@@ -25,7 +25,7 @@ class Factors {
       for (int i = 1; i <= sqrtN; i++) { // Loop from 1 to the square root of n
           if (n % i == 0) { // Check if i is a factor of n
               factors.add(i); // Add i to the factors list
-              if (i != n / i) { // If i and n / i are different
+              if (i != n / i) { // If i and n / i are different *IMPORTANT
                   factors.add(n / i); // Add n / i to the factors list
               }
           }
